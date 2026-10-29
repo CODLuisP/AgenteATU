@@ -1,0 +1,11 @@
+# Build
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Configuración con credenciales (no se sube)
+appsettings.json
+appsettings.*.json
+!appsettings.example.json

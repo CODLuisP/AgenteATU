@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  agente-atu:
+    build: .
+    image: agente-atu:latest
+    container_name: agente-atu
+    restart: unless-stopped
+    environment:
+      - TZ=America/Lima
+    volumes:
+      - ./AgenteATU/appsettings.json:/app/appsettings.json:ro
+    networks:
+      - app-net
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  app-net:
+    external: true

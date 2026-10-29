@@ -1,0 +1,10 @@
+**/bin
+**/obj
+.git
+.gitignore
+**/.vs
+**/*.user
+**/appsettings.json
+**/appsettings.*.json
+docker-compose.yml
+Dockerfile
